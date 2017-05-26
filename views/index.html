@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Text Summarization</title>
+<link rel='stylesheet', href='/stylesheets/style.css'/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id = "loading"></div>
+<div id="content">
+<div class = "container-fluid">
+<div class="well">
+<h1>
+Please Enter your text!
+</h1>
+</div>
+<div>
+<form action="/detect"method="post">
+<textarea class = "form-control"type="text" id="text" rows="15" cols="100" placeholder="Enter your text" name="text"><%=text%></textarea></br>
+</div>
+<div class = "well">
+<h1>
+Summary Generated!
+</h1>
+</div>
+<div>
+<textarea class = "form-control"rows="15" cols="100" id="summary"><%=summary%></textarea>
+</div>
+</br>
+</br>
+<div>
+<input type="text" id="amt" size="50" placeholder="Enter the amount of summary to be generated" name="amt"></input>%
+</div>
+</br>
+</br>
+<div>
+<button id = "sub"type = "submit" class="btn btn-primary">Submit</button>
+</div>
+</form>	
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+			document.getElementById("loading").style.display = "none";
+            document.getElementById("content").style.display = "block";
+			$('#sub').click(function(event){
+			console.log("click");
+			document.getElementById("loading").style.display = "block";
+            document.getElementById("content").style.display = "none";
+			});
+			
+	});
+</script>
+</body>
+</html>
