@@ -1,1 +1,2 @@
 # TextSummarization
+# Algorithm used for text summarization is based on the research paper "Extraction-Based Single-Document Summarization using Random Indexing" co-authored by Niladri Chatterjee and Shiwali Mohan. Research Paper is available in the repository.
